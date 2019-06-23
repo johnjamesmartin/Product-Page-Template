@@ -1,33 +1,322 @@
-.App {
+:root {
+  --darkest-color: #060708;
+  --dark-color: #0d0f10;
+  --primary-color: #d6ab7b;
+  --secondary-color: #a52a2a;
+  --muted-color: rgba(255, 255, 255, 0.5);
+  --lightish-color: #bfbfbf;
+  --lightest-color: #fff;
+}
+
+body {
+  background-color: var(--darkest-color);
+  background-image: url('/images/dark-wood.png');
+  background-attachment: fixed;
+  font-family: 'Special Elite', cursive;
+  min-width: 380px;
+  position: relative;
+}
+
+.guidelines {
+  border: 0;
+}
+
+.header-img {
+  height: 42px;
+  margin-right: 20px;
+  width: 100px;
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.navbar-dark {
+  background-color: var(--darkest-color) !important;
+}
+
+.segment {
+  background: none;
+  border-top: 1px solid var(--darkest-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.subtitle {
+  color: var(--secondary-color);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title {
+  color: var(--lightish-color);
+}
+
+/* Carousel:
+************************************/
+.carousel-caption {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  border: 0 solid var(--darkest-color);
+  height: 620px;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-caption h3 {
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.carousel-caption p {
+  color: var(--primary-color);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.carousel-image {
+  height: 500px !important;
+}
+
+.carousel-inner {
+  text-align: center;
+}
+.carousel-inner img {
+  height: 100%;
+}
+
+.carousel-item {
+  background: none;
+  height: 650px;
+}
+
+#features {
+  background: none;
+  height: 650px;
+  margin-top: 58px !important;
+}
+
+.segment-carousel {
+  height: 650px;
+  padding: 0px;
+}
+
+/* How it works:
+************************************/
+#how-it-works {
+  color: #6d7a86;
+  display: flex;
+  border-top: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.how-it-works-description {
+  color: var(--lightish-color);
+}
+
+.how-it-works-wrapper {
+  padding: 20px;
+}
+
+.how-it-works-step {
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.segment-howitworks {
+  background-attachment: fixed;
+  background-image: url('https://ibb.co/cgZ7mXL');
+  height: 1100px;
+}
+
+.video-iframe {
+  box-shadow: 2px 2px 10px var(--darkest-color);
+  height: 550px;
+  width: 85%;
+}
+
+/* Pricing:
+************************************/
+#pricing {
+  background-color: var(--dark-color);
+}
+
+.price-tier-features p {
+  color: var(--lightish-color);
+  line-height: 15px;
+}
+
+.price-tier-price {
+  color: var(--lightish-color);
+  font-size: 40px;
+}
+
+.price-tier-wrapper {
+  background-color: #121416;
+  border: 1px solid var(--lightish-color);
+  margin: 0px 10px 0px 10px;
+  padding: 0;
+  transform: scale(0.95);
+}
+
+.price-tier-wrapper hr {
+  border: 1px solid #262626;
+  width: 85%;
+}
+
+.price-tier-title {
+  background-color: var(--lightish-color);
+  font-size: 20px;
+  font-weight: 300;
+  padding: 3px;
+  text-transform: uppercase !important;
+  width: 100%;
+}
+
+/* Btn select:
+************************************/
+.btn-select {
+  background-color: var(--dark-color);
+  border: 0;
+  border-radius: 20px;
+  color: var(--lightish-color);
+  cursor: pointer;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  text-transform: uppercase !important;
+  width: 85%;
+}
+
+.btn-select:hover {
+  background-color: #191b1e;
+}
+
+/* Footer:
+************************************/
+#footer {
+  color: var(--muted-color);
+  font-size: 7px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  opacity: 0.8;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--darkest-color);
+  height: 80px;
+  text-align: center;
+}
+
+.carousel-caption {
+  animation-delay: 0s;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-name: captionAppear;
+}
+
+/* Animation:
+************************************/
+@keyframes captionAppear {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1);
+    opacity: 100;
+  }
+}
+@keyframes signupAppear {
+  0% {
+    opacity: 10;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+/* Media queries:
+************************************/
+@media only screen and (max-width: 992px) {
+  #features {
+    margin-top: 54px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #features {
+    margin-top: 54px;
+  }
+
+  #howitworks {
+    height: 800px;
+  }
+}
+@media only screen and (max-width: 625px) {
+  #features {
+    margin-top: 134px;
+    height: 900px;
+  }
+  #howitworks {
+    height: 1000px;
+  }
+  .video-iframe {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .email-signup {
+    margin-top: 80px;
+  }
+
+  #features {
+    margin-top: 134px;
+    height: 850px;
+  }
+
+  .segment-howitworks {
+    height: 1400px;
+  }
+  #howitworks {
+    height: 1200px;
+  }
+
+  .price-tier-wrapper {
+    margin: 10px;
+  }
+  .video-iframe {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .email-signup {
+    margin-top: 80px;
+  }
+
+  #features {
+    margin-top: 134px;
+    height: 650px;
+  }
+
+  #howitworks {
+    height: 2000px;
+  }
+
+  .price-tier-wrapper {
+    margin: 10px;
+  }
+  .video-iframe {
+    width: 100%;
   }
 }
